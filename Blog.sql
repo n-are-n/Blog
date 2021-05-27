@@ -40,8 +40,8 @@ CREATE TABLE `Post` (
 -- Dumping data for table `Post`
 --
 
-INSERT INTO `Post` (`ID`, `Date & Time`, `Title`, `Blog`) VALUES
-(5, '2021-05-26 10:52:12', 'Powrna', 'Beauty!');
+INSERT INTO `Post` (`Date & Time`, `Title`, `Blog`) VALUES
+('2021-05-26 10:52:12', 'Powrna', 'Beauty!');
 
 -- --------------------------------------------------------
 
@@ -63,8 +63,8 @@ CREATE TABLE `User` (
 -- Dumping data for table `User`
 --
 
-INSERT INTO `User` (`ID`, `Date & Time`, `Admin`, `Name`, `Number`, `Mail`, `Password`) VALUES
-(10, '2021-05-26 07:31:42', b'1', 'Prasad', '8428558275', 'pmpsrnp@outlook.com', '7db677096eb5af8d0e490bcf2094096f');
+INSERT INTO `User` (`Date & Time`, `Admin`, `Name`, `Number`, `Mail`, `Password`) VALUES
+('2021-05-26 07:31:42', b'1', 'Prasad', '8428558275', 'pmpsrnp@outlook.com', '7db677096eb5af8d0e490bcf2094096f');
 
 --
 -- Indexes for dumped tables
@@ -91,13 +91,13 @@ ALTER TABLE `User`
 -- AUTO_INCREMENT for table `Post`
 --
 ALTER TABLE `Post`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `User`
 --
 ALTER TABLE `User`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
