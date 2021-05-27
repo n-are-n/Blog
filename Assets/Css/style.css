@@ -1,0 +1,52 @@
+header{
+    border-bottom: 1px solid #bbb;
+}
+
+form{
+    text-align: center;
+}
+
+fieldset{
+    display: inline;
+    text-align: center;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 890px;
+}
+
+#desc{
+    display: inline;
+}
+
+#logo{
+    font-family: monospace;
+    font-size: 3rem;
+    color: #33C3F0;
+    text-decoration: none;
+    transform: skew(-5deg,-5deg) rotate(5deg);
+    transform-origin: center center;
+    text-shadow: 1px 1px #1EAEDB,
+                2px 2px #1EAEDB,
+                3px 3px #1EAEDB,
+                4px 4px #1EAEDB,
+                5px 5px #1EAEDB,
+                6px 6px #1EAEDB,
+                7px 7px #1EAEDB,
+                8px 8px #bbb,
+                9px 9px #bbb,
+                10px 10px #bbb,
+                11px 11px 15px rgba(0,0,0,0.5);
+}
+
+.row{
+    border: 1px solid #bbb;
+    margin: 5px 0;
+    padding: 0 5px;
+}
+
+.right,.delete{
+    float: right;
+}
