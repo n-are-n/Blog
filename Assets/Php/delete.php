@@ -1,4 +1,5 @@
 <?php
+# User Post Deletion
 include_once('config.php');
 $ID = $_REQUEST['id'];
 $query = "DELETE FROM " . Table . " WHERE ID = $ID";
