@@ -1,0 +1,58 @@
+// Custom CSS
+
+// Variables
+$Color = #bbb
+$Border = 1px solid $Color
+$Size = 5px
+$Align = center
+$Shadow = #1EAEDB
+
+// Mixin
+shadow(size,default = $Color,default = $Shadow)
+    text-shadow: size size $Shadow,
+                size+1 size+1 $Shadow,
+                size+2 size+2 $Shadow,
+                size+3 size+3 $Shadow,
+                size+4 size+4 $Shadow,
+                size+5 size+5 $Shadow,
+                size+6 size+6 $Shadow,
+                size+7 size+7 $Color,
+                size+8 size+8 $Color,
+                size+9 size+9 $Color,
+                size+10 size+10 size+14 rgba(0,0,0,size/2)
+                
+body
+    header
+        border-bottom $Border// set border bottom
+
+    form
+    fieldset
+        text-align $Align // align the form to center
+
+    footer
+        position fixed // Set footer to fixed position
+        bottom 0
+        left 890px // Move 890 to left of page
+
+    fieldset
+        display inline // Display content in fieldset in same line
+
+    #desc
+        @extend fieldset
+
+    #logo
+        font-family monospace // Set font to monospace
+        font-size 3rem // Set font size
+        color #33C3F0 // Set color of logo
+        text-decoration none // Set decoration to none
+        transform skew(-5deg,-5deg) rotate(5deg)
+        transform-origin $Align $Align
+        shadow(1px)
+
+    .right
+        float right // Move to right of page
+
+    .row
+        border $Border
+        margin $Size 0 // Set margin to row
+        padding 0 $Size // Set padding to row

@@ -1,5 +1,6 @@
+<!-- Home Page -->
 <?php
-session_start();
+session_start(); #Session
 include_once('Assets/Php/read.php');
 ?>
 <!DOCTYPE html>
@@ -25,7 +26,9 @@ include_once('Assets/Php/read.php');
         </section>
     </main>
     <?php include_once('Inc/foot.php') ?>
-    <script src="Assets/Js/home.js"></script>
+    <script src="Assets/Js/home.js">
+    /* Javascript File *////
+    </script>
 </body>
 
 </html>
