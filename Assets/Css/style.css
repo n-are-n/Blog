@@ -3,19 +3,53 @@ body header {
 }
 body form,
 body fieldset,
-body #desc {
+body .desc {
   text-align: center;
+}
+body input[type="file"] {
+  position: relative;
+  left: 35px;
+}
+body fieldset,
+body .desc {
+  display: inline;
 }
 body footer {
   position: fixed;
   bottom: 0;
   left: 890px;
 }
-body fieldset,
-body #desc {
-  display: inline;
+body .right {
+  float: right;
 }
-body #logo {
+body .link:hover {
+  background: #f0f0f0;
+}
+body .dropdown {
+  display: inline-block;
+  float: right;
+}
+body .dropdown:hover .menu {
+  display: inline;
+  margin-top: 40px;
+}
+body .menu {
+  display: none;
+  background: #fffafa;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+body .row {
+  border: 1px solid #bbb;
+  margin: 5px 0;
+  padding: 0 5px;
+}
+body .link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  border-top: solid 1px #e0e0e0;
+}
+body .logo {
   font-family: monospace;
   font-size: 3rem;
   color: #33c3f0;
@@ -23,12 +57,4 @@ body #logo {
   transform: skew(-5deg, -5deg) rotate(5deg);
   transform-origin: center center;
   text-shadow: 1px 1px #1eaedb, 2px 2px #1eaedb, 3px 3px #1eaedb, 4px 4px #1eaedb, 5px 5px #1eaedb, 6px 6px #1eaedb, 7px 7px #1eaedb, 8px 8px #bbb, 9px 9px #bbb, 10px 10px #bbb, 11px 11px 15px rgba(0,0,0,0.5);
-}
-body .right {
-  float: right;
-}
-body .row {
-  border: 1px solid #bbb;
-  margin: 5px 0;
-  padding: 0 5px;
 }

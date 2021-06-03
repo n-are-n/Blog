@@ -14,7 +14,7 @@
                         <!-- ID Field -->
                         <input name="ID" value="<?php echo $Blog['ID'] #Blog ID ?>" hidden>
                         <input type="text" size="25" name="Title" value="<?php echo $Blog['Title'] #Blog Title ?>" title="only alphabets & space" pattern="[A-Za-z\s]+" required><br>
-                        <textarea name="Blog" required><?php echo $Blog['Blog'] #Blog content ?></textarea><br>
+                        <textarea name="Blog" cols="27"  required><?php echo $Blog['Blog'] #Blog content ?></textarea><br>
                         <input type="submit" value="Update Post">
                     </fieldset>
                 </form>

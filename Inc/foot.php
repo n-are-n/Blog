@@ -1,4 +1,4 @@
 <!-- Footer of Blog -->
 <footer>
-    <a href="home.php" id="logo">Blog</a>
+    <a href="home.php" class="logo">Blog</a>
 </footer>

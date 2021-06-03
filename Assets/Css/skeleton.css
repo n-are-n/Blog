@@ -124,7 +124,6 @@ html {
   font-size: 62.5%; }
 body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; }
@@ -161,9 +160,6 @@ p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
   color: #1EAEDB; }
-a:hover {
-  color: #0FA0CE; }
-
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -272,9 +268,7 @@ select:focus {
   outline: 0; }
 label,
 legend {
-  display: block;
-  margin-bottom: .5rem;
-  font-weight: 600; }
+  display: block; }
 /*fieldset {
   padding: 0;
   border-width: 0; }*/

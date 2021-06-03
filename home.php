@@ -1,6 +1,5 @@
 <!-- Home Page -->
 <?php
-session_start(); #Session
 include_once('Assets/Php/read.php');
 ?>
 <!DOCTYPE html>
@@ -10,17 +9,12 @@ include_once('Assets/Php/read.php');
 <body>
 <?php include_once('Inc/header.php') ?>
     <main>
-        <section>
-            <?php if (isset($_SESSION['Name'])): ?>
-                <a href="create.php" class="button">+ Post</a>
-            <?php endif; ?>
-        </section>
         <section class="container">
                 <?php foreach ($sql as $Blog) { ?>
                     <div class="row">
                         <h5>Title : <?php echo $Blog['Title']; ?></h5>
-                        <h6 id="desc">Description : <?php echo $Blog['Blog']; ?></h6>
-                        <a href="view.php?id=<?php echo $Blog['ID']; ?>" class="button right">Read More >>></a>
+                        <h6 class="desc">Description : <?php echo $Blog['Blog']; ?></h6>
+                        <a href="view.php?id=<?php echo $Blog['ID']; ?><?php if(isset($_SESSION['ID']) && $_SESSION['ID'] === $Blog['User_ID']): echo '&user='.$_SESSION['ID'] ?><?php endif; ?>" class="button right">Read More >>></a>
                     </div>
                 <?php } ?>
         </section>

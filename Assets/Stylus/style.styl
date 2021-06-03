@@ -29,18 +29,52 @@ body
     fieldset
         text-align $Align // align the form to center
 
+    input[type="file"]
+        position relative
+        left 35px
+
+    fieldset
+        display inline // Display content in fieldset in same line
+
     footer
         position fixed // Set footer to fixed position
         bottom 0
         left 890px // Move 890 to left of page
 
-    fieldset
-        display inline // Display content in fieldset in same line
-
-    #desc
+    .desc
         @extend fieldset
 
-    #logo
+    .right
+        float right // Move to right of page
+
+    .link:hover
+        background #f0f0f0
+
+    .dropdown
+        display inline-block
+        float right
+
+    .dropdown:hover .menu
+        display inline
+        margin-top 40px
+
+    .menu
+        display none
+        background snow
+        box-shadow 0 1px 2px rgba(0,0,0,0.3)
+
+    .row
+        border $Border
+        margin $Size 0 // Set margin to row
+        padding 0 $Size // Set padding to row
+
+    .link
+        display block
+        padding 10px
+        text-decoration none
+        border-top solid 1px #e0e0e0
+
+    .logo
         font-family monospace // Set font to monospace
         font-size 3rem // Set font size
         color #33C3F0 // Set color of logo
@@ -48,11 +82,3 @@ body
         transform skew(-5deg,-5deg) rotate(5deg)
         transform-origin $Align $Align
         shadow(1px)
-
-    .right
-        float right // Move to right of page
-
-    .row
-        border $Border
-        margin $Size 0 // Set margin to row
-        padding 0 $Size // Set padding to row

@@ -11,9 +11,10 @@
                 <fieldset>
                     <legend>New Post</legend>
                     <!--Title Field -->
+                    <input type="text" name="ID" value="<?php echo $_SESSION['ID'] ?>" hidden>
                     <input type="text" name="Title" size="25" title="only alphabets & space" placeholder="Blog Title" pattern="[A-Za-z\s]+" required><br>
                     <!-- Blog Field -->
-                    <textarea placeholder="Blog..." name="Blog" required></textarea><br>
+                    <textarea placeholder="Blog..." cols="27" name="Blog" required></textarea><br>
                     <input type="submit" class="button" value="Add Post">
                 </fieldset>
             </form>
