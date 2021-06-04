@@ -8,7 +8,7 @@
                 <img style="border-radius: 50%;" src="" width="40" height="40" class="right">
                 <div class="menu">
                     <!-- If its set logout & delete button will be seen -->
-                    <a href="create.php?id=<?php echo $_SESSION['ID'] ?>" class="link">Add Post</a>
+                    <a href="manage.php?id=<?php echo $_SESSION['ID'] ?>" class="link">Posts</a>
                     <a href="<?php echo BASE_URL ?>signout.php" class="link">Logout</a>
                     <a href="<?php echo BASE_URL ?>deactivate.php?id=<?php echo $_SESSION['ID'] ?>" class="link">Delete Account</a>
                 </div>

@@ -1,5 +1,5 @@
 // Custom CSS
-
+@import 'nib'
 // Variables
 $Color = #bbb
 $Border = 1px solid $Color
@@ -30,16 +30,13 @@ body
         text-align $Align // align the form to center
 
     input[type="file"]
-        position relative
-        left 35px
+        relative top left 35px
 
     fieldset
         display inline // Display content in fieldset in same line
 
     footer
-        position fixed // Set footer to fixed position
-        bottom 0
-        left 890px // Move 890 to left of page
+        fixed bottom 0 left 890px // Move 890 to left of page
 
     .desc
         @extend fieldset
@@ -51,7 +48,7 @@ body
         background #f0f0f0
 
     .dropdown
-        display inline-block
+        display inline
         float right
 
     .dropdown:hover .menu

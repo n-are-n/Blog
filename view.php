@@ -11,12 +11,6 @@
                 <div class="row">
                     <h5>Title : <?php echo $Blog['Title']; ?></h5>
                     <h6>Description : <?php echo $Blog['Blog']; ?></h6>
-                    <?php if (isset($_SESSION) && isset($result['User_ID'])) : ?>
-                        <?php if (($_SESSION['ID'] === $result['User_ID'])) : ?>
-                            <a class="button" href="edit.php?id=<?php echo $Blog['ID'] ?>">Edit</a>
-                            <a class="button button-primary right" href="<?php echo BASE_URL ?>delete.php?id=<?php echo $Blog['ID'] ?>">Delete</a>
-                        <?php endif; ?>
-                    <?php endif; ?>
                 </div>
             <?php } ?>
         </section>
