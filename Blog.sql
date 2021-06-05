@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2021 at 05:36 PM
+-- Generation Time: Jun 05, 2021 at 04:51 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -26,22 +26,49 @@ USE `Blog`;
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `Category`
+--
+
+CREATE TABLE `Category` (
+  `ID` int(11) NOT NULL,
+  `Category` varchar(225) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `Category`
+--
+
+INSERT INTO `Category` (`ID`, `Category`) VALUES
+(1, 'Data Science'),
+(2, 'Virtual Reality');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Comment`
+--
+
+CREATE TABLE `Comment` (
+  `ID` int(11) NOT NULL,
+  `Post_ID` int(11) NOT NULL,
+  `Date & Time` timestamp NOT NULL DEFAULT current_timestamp(),
+  `Comment` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Post`
 --
 
 CREATE TABLE `Post` (
   `ID` int(11) NOT NULL,
+  `User_ID` int(11) DEFAULT NULL,
+  `Category_ID` int(11) NOT NULL,
   `Date & Time` timestamp NOT NULL DEFAULT current_timestamp(),
-  `Title` varchar(255) NOT NULL,
+  `Title` varchar(225) NOT NULL,
   `Blog` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `Post`
---
-
-INSERT INTO `Post` (`Date & Time`, `Title`, `Blog`) VALUES
-('2021-05-26 10:52:12', 'Powrna', 'Beauty!');
 
 -- --------------------------------------------------------
 
@@ -53,6 +80,7 @@ CREATE TABLE `User` (
   `ID` int(11) NOT NULL,
   `Date & Time` timestamp NOT NULL DEFAULT current_timestamp(),
   `Admin` bit(1) NOT NULL DEFAULT b'0',
+  `Pic` blob NOT NULL,
   `Name` varchar(225) NOT NULL,
   `Number` varchar(10) NOT NULL,
   `Mail` varchar(225) NOT NULL,
@@ -60,32 +88,52 @@ CREATE TABLE `User` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `User`
---
-
-INSERT INTO `User` (`Date & Time`, `Admin`, `Name`, `Number`, `Mail`, `Password`) VALUES
-('2021-05-26 07:31:42', b'1', 'Prasad', '8428558275', 'pmpsrnp@outlook.com', '7db677096eb5af8d0e490bcf2094096f');
-
---
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `Category`
+--
+ALTER TABLE `Category`
+  ADD PRIMARY KEY (`ID`),
+  ADD UNIQUE KEY `Category` (`Category`);
+
+--
+-- Indexes for table `Comment`
+--
+ALTER TABLE `Comment`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `Post_Comment` (`Post_ID`);
 
 --
 -- Indexes for table `Post`
 --
 ALTER TABLE `Post`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `User_Post` (`User_ID`),
+  ADD KEY `Category_Post` (`Category_ID`);
 
 --
 -- Indexes for table `User`
 --
 ALTER TABLE `User`
-  ADD PRIMARY KEY (`ID`),
-  ADD UNIQUE KEY `Number` (`Number`);
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `Category`
+--
+ALTER TABLE `Category`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `Comment`
+--
+ALTER TABLE `Comment`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `Post`
@@ -98,6 +146,23 @@ ALTER TABLE `Post`
 --
 ALTER TABLE `User`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `Comment`
+--
+ALTER TABLE `Comment`
+  ADD CONSTRAINT `Post_Comment` FOREIGN KEY (`Post_ID`) REFERENCES `Post` (`ID`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `Post`
+--
+ALTER TABLE `Post`
+  ADD CONSTRAINT `Category_Post` FOREIGN KEY (`Category_ID`) REFERENCES `Category` (`ID`),
+  ADD CONSTRAINT `User_Post` FOREIGN KEY (`User_ID`) REFERENCES `User` (`ID`) ON DELETE SET NULL;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
