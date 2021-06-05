@@ -6,11 +6,11 @@ $Name = $_POST['Name'];
 $Number = $_POST['Number'];
 $Mail = $_POST['Mail'];
 $Password = md5($_POST['Password']);
-$Pic = $_POST['Pic'];
+// $Pic = $_POST['Pic'];
 $query = "SELECT * FROM " . table . " WHERE Name = $Name || Number = $Number || Mail = '$Mail'"; # check wether user is already exist
 $sql = mysqli_query($conn, $query);
 if ($sql == false) { # if not then insertion
-    $query = "INSERT INTO " . table . "(Pic,Name,Number,Mail,Password) VALUES('$Pic','$Name','$Number','$Mail','$Password')";
+    $query = "INSERT INTO " . table . "(Name,Number,Mail,Password) VALUES('$Name','$Number','$Mail','$Password')";
     $sql = mysqli_query($conn, $query);
     header('Location: ../../signin.php?User=Added');
 } else {
