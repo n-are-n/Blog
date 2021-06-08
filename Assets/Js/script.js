@@ -1,8 +1,15 @@
-document.getElementsByClassName( 'comments' ).addEventListener( 'click', ( ev ) =>
+function comment (value)
 {
-    document.getElementById( 'form' ).classList.toggle( 'hidden' );
-} );
-document.getElementById( 'submit' ).addEventListener( 'click', ( ev ) =>
-{
-    document.getElementById( 'submit' ).classList.add( 'hidden' );
-} );
+    var count = value-1;
+    var comments = document.getElementsByClassName('comments' );
+    var forms = document.getElementsByTagName( 'form' );
+    var submit = document.getElementsByClassName( 'submit' );
+    comments[ count ].addEventListener( 'click', ( ev ) =>
+    {
+        forms[ count ].classList.toggle( 'hidden' );
+    } );
+    submit[ count ].addEventListener( 'click', ( ev ) =>
+    {
+        forms[count].classList.add( 'hidden' );
+    } );
+}

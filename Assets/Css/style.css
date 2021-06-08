@@ -80,3 +80,11 @@ body .delete {
 body a:hover .login {
   fill: #333;
 }
+svg {
+  position: relative;
+  top: 5px;
+  margin-right: 1px;
+}
+svg:hover {
+  cursor: pointer;
+}
