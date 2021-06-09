@@ -1,4 +1,4 @@
-<!-- Header of Blog -->
+<!-- Header -->
 <header>
     <nav>
         <a href="home.php" class="logo">Blog</a>

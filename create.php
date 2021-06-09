@@ -1,5 +1,5 @@
 <!-- Create Post Page -->
-<?php include_once('Assets/Php/config.php') ?>
+<?php include_once('Assets/Php/config.php') ?> <!-- include configuration file --> 
 <!DOCTYPE html>
 <html lang="en">
 <?php include_once('Inc/head.php') ?>

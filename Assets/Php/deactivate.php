@@ -5,6 +5,6 @@ $ID = $_REQUEST['id']; # Get id of acc to del
 $query = "DELETE FROM ".table." WHERE ID = $ID";
 mysqli_query($conn,$query);
 session_start();
-session_unset();
-session_destroy();
+session_unset(); // Unset the session variables
+session_destroy(); // Destroy session variables
 header('Location: ../../home.php?User=Deactivated');

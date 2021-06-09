@@ -15,7 +15,7 @@
                         <input name="ID" value="<?php echo $Blog['ID'] #Blog ID ?>" hidden>
                         <input type="text" size="25" name="Title" value="<?php echo $Blog['Title'] #Blog Title ?>" title="only alphabets & space" pattern="[A-Za-z\s]+" required><br>
                         <select name="Category" style="padding: 6px 60px">
-                            <option selected><?php  // echo $Blog['Category_ID'] ?>Category</option>
+                            <option selected>Category</option>
                             <option value="1">Android Application Development</option>
                             <option value="2">Windows Application Development</option>
                         </select><br>

@@ -1,3 +1,4 @@
+<!-- Manage Post Page --> 
 <?php include_once('Assets/Php/manage.php') ?>
 <!DOCTYPE html>
 <html lang="en">
