@@ -20,7 +20,7 @@
             <?php foreach ($sql as $Blog) { ?>
                 <div class="row">
                     <h5>Title : <?php echo $Blog['Title']; ?></h5>
-                    <h6>Description : <?php echo $Blog['Blog']; ?></h6>
+                    <h6>Description : <?php echo $Blog['Post']; ?></h6>
                     <a class="button" href="edit.php?id=<?php echo $Blog['ID'] ?>">
                         Edit
                         <svg class="login" height="20" viewBox="0 -1 401.52289 401" width="20" xmlns="http://www.w3.org/2000/svg" fill="#555">

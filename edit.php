@@ -16,10 +16,10 @@
                         <input type="text" size="25" name="Title" value="<?php echo $Blog['Title'] #Blog Title ?>" title="only alphabets & space" pattern="[A-Za-z\s]+" required><br>
                         <select name="Category" style="padding: 6px 60px">
                             <option selected><?php  // echo $Blog['Category_ID'] ?>Category</option>
-                            <option value="1">Data Science</option>
-                            <option value="2">Virtual Reality</option>
+                            <option value="1">Android Application Development</option>
+                            <option value="2">Windows Application Development</option>
                         </select><br>
-                        <textarea name="Blog" cols="27"  required><?php echo $Blog['Blog'] #Blog content ?></textarea><br>
+                        <textarea name="Post" cols="27"  required><?php echo $Blog['Post'] #Blog content ?></textarea><br>
                         <input type="submit" value="Update Post">
                     </fieldset>
                 </form>

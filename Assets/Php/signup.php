@@ -7,9 +7,9 @@ $Number = $_POST['Number'];
 $Mail = $_POST['Mail'];
 $Password = md5($_POST['Password']);
 // $Pic = $_POST['Pic'];
-$query = "SELECT * FROM " . table . " WHERE Name = $Name || Number = $Number || Mail = '$Mail'"; # check wether user is already exist
+$query = "SELECT * FROM " . table . " WHERE Name = '$Name' || Number = '$Number' || Mail = '$Mail' "; # check wether user is already exist
 $sql = mysqli_query($conn, $query);
-if ($sql == false) { # if not then insertion
+if($sql->{'num_rows'} === 0 ){ # if not then insertion
     $query = "INSERT INTO " . table . "(Name,Number,Mail,Password) VALUES('$Name','$Number','$Mail','$Password')";
     $sql = mysqli_query($conn, $query);
     header('Location: ../../signin.php?User=Added');

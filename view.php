@@ -13,7 +13,7 @@
                     <div>
                         <h4>Title : <?php echo $Blog['Title']; ?></h4>
                         <h6>Category : <?php echo $Blog['Category_ID'] ?></h6>
-                        <h5>Description : <?php echo $Blog['Blog']; ?></h5>
+                        <h5>Description : <?php echo $Blog['Post']; ?></h5>
                     </div>
                     <?php if (isset($_SESSION['ID'])) { ?>
                         <div>

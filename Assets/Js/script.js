@@ -1,6 +1,6 @@
 function comment (value)
 {
-    var count = value-1;
+    var count = value;
     var comments = document.getElementsByClassName('comments' );
     var forms = document.getElementsByTagName( 'form' );
     var submit = document.getElementsByClassName( 'submit' );
