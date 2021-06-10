@@ -1,8 +1,8 @@
 <?php
 include_once('config.php');
 $Number = $_POST['Number'];
-$Password = md5($_POST['Password']); // Encode the password using md5
-$query = "SELECT * FROM " . table . " WHERE Number = $Number && Password = '$Password'";
+$Password = $_POST['Password'];
+$query = "SELECT * FROM " . table . " WHERE Number = $Number && Password = PASSWORD('$Password')";
 $sql = mysqli_query($conn, $query);
 $rows = mysqli_num_rows($sql);
 if ($rows > 0) { // If the user already exist then set session variables

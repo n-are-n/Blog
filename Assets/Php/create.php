@@ -5,6 +5,6 @@ $ID = $_GET['ID'];
 $Category = $_GET['Category'];
 $Title = $_GET['Title']; # Get title from user input
 $Blog = $_GET['Blog']; # Get Blog content
-$query = "INSERT INTO " . Table . "(User_ID,Category_ID,Title,Post) VALUES('$ID','$Category','$Title','$Blog')"; # Inserting $Title & $Blog to database
+$query = "INSERT INTO " . Table . "(User_ID,Category_ID,Title,Post) VALUES($ID,$Category,'$Title','$Blog')"; # Inserting $Title & $Blog to database
 mysqli_query($conn, $query);
 header('Location: ../../home.php?Post=Added'); # After insertion redirect to home page
