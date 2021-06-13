@@ -2,106 +2,102 @@
 @import 'nib'
 // Importing nib library
 // Variables
-$Color = #bbb
-$Border = 1px solid $Color
+$Cyan = #33C3F0
+$Gray20 = #333
+$Grey88 = #E0E0E0
+$Red = #F0F0F0
+$Light_Gray = #bbb
+$Border = 1px solid $Light_Gray
 $Size = 5px // Assign 5px to $Size variable 
-$Align = center
-$Shadow = #1EAEDB
+$Summer_Sky = #1EAEDB
 
 // Mixin(Function)
-shadow(size,default = $Color,default = $Shadow)
-    text-shadow: size size $Shadow,
-                size+1 size+1 $Shadow,
-                size+2 size+2 $Shadow,
-                size+3 size+3 $Shadow,
-                size+4 size+4 $Shadow,
-                size+5 size+5 $Shadow,
-                size+6 size+6 $Shadow,
-                size+7 size+7 $Color,
-                size+8 size+8 $Color,
-                size+9 size+9 $Color,
+shadow(size,default = $Light_Gray,default = $Summer_Sky)
+    text-shadow: size size $Summer_Sky,
+                size+1 size+1 $Summer_Sky,
+                size+2 size+2 $Summer_Sky,
+                size+3 size+3 $Summer_Sky,
+                $Size $Size $Summer_Sky,
+                size+5 size+5 $Summer_Sky,
+                size+6 size+6 $Summer_Sky,
+                size+7 size+7 $Light_Gray,
+                size+8 size+8 $Light_Gray,
+                size+9 size+9 $Light_Gray,
                 size+10 size+10 size+14 rgba(0,0,0,size/2)
-                
-body
-    header
-        border-bottom $Border// set border bottom
 
-    form
-    fieldset
-        text-align $Align // align the form to center
+header
+    border-bottom $Border// set border bottom
 
-    input[type="file"]
-        relative top left 35px
+input[type="file"]
+    relative top left 35px
 
-    fieldset
-        display inline // Display content in fieldset in same line
+input[type="search"]
+    border-radius: 20px // Set Border-radius to 20px
 
-    footer
-        fixed bottom 0 left 890px // Move 890 to left of page
+footer
+    fixed bottom 0 left 890px // Move 890 to left of page
 
-    .desc
-        // Adding fieldset style
-        @extend fieldset
+form
+fieldset
+    text-align center // align the form to center
 
-    .right
-        float right // Move to right of page
-
-    .link:hover
-        background #f0f0f0 // Set background color to #F0F0F0
-
-    .dropdown
-        display inline
-        float right // Move to right
-
-    .dropdown:hover .menu
-        display inline
-        margin-top 40px // Move 40px from top 
-
-    .menu
-        display none
-        background snow
-        box-shadow 0 1px 2px rgba(0,0,0,0.3) // Adding box shadow
-
-    .row
-        border $Border
-        margin $Size 0 // Set margin to row
-        padding 0 $Size // Set padding to row
-
-    .link
-        display block
-        padding 10px
-        text-decoration none
-        border-top solid 1px #e0e0e0
-
-    .logo
-        font-family monospace // Set font to monospace
-        font-size 3rem // Set font size
-        color #33C3F0 // Set color of logo
-        text-decoration none // Set decoration to none
-        transform skew(-5deg,-5deg) rotate(5deg)
-        transform-origin $Align $Align
-        shadow(1px)
-
-    .hidden
-        display none
-
-    .login
-    .delete
-        relative top 5px right
-
-    a:hover
-        .login
-            fill #333 // Set SVG color to #333
 svg
-    relative top 5px
+    relative top $Size
     margin-right 1px
     &:hover
         cursor pointer // Change cursor style to pointer
-aside
-    relative top -400px left 20px
 
 .search
-    display inline
     relative left 500px
-    input[type="search"]
-        border-radius: 20px // Set Border-radius to 20px
+
+.menu
+    background snow
+    box-shadow 0 1px 2px rgba(0,0,0,0.3) // Adding box shadow
+
+.row
+    border $Border
+    margin $Size 0 // Set margin to row
+    padding 0 $Size // Set padding to row
+
+.link
+    display block
+    padding 10px
+    text-decoration none
+    border-top solid 1px $Grey88
+
+.logo
+    font-family monospace // Set font to monospace
+    font-size 3rem // Set font size
+    color $Cyan // Set color of logo
+    text-decoration none // Set decoration to none
+    transform skew(-5deg,-5deg) rotate(5deg)
+    transform-origin center center
+    shadow(1px)
+
+.link:hover
+    background $Red // Set background color to #F0F0F0
+
+.dropdown:hover .menu
+    margin-top 40px // Move 40px from top 
+
+a:hover
+    .login
+        fill $Gray20 // Set SVG color to #333
+
+fieldset
+.search
+.dropdown
+.dropdown:hover .menu
+    display inline // Display content in fieldset in same line
+
+.login
+.delete
+    relative top 5px right
+
+.menu
+.hidden
+    display none
+
+.dropdown
+.right
+    float right // Move to right of page

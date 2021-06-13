@@ -8,7 +8,7 @@
     <?php include_once('Inc/header.php') ?>
     <main>
         <section>
-            <form action="<?php echo BASE_URL . 'create.php' ?>" method="GET">
+            <form action="<?php echo BASE_URL . 'create.php' ?>" method="GET" enctype="multipart/form-data">
                 <fieldset>
                     <legend>New Post</legend>
                     <input type="text" name="ID" value="<?php echo $_SESSION['ID'] ?>" hidden>

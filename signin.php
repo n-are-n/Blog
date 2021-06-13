@@ -7,13 +7,13 @@
 
 <body>
 <header>
-<nav>
-<a href="index.php" id="logo">Blog</a>
-</nav>
+    <nav>
+        <a href="index.php" class="logo">Blog</a>
+    </nav>
 </header>
     <main>
         <section>
-            <form action="<?php echo BASE_URL #BASE_URL: Assets/Php/ ?>signin.php" method="post">
+            <form action="<?php echo BASE_URL #BASE_URL: Assets/Php/ ?>signin.php" method="post" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Login</legend>
                     <!-- Mobile Number Field : only 10 digit number is allowed -->

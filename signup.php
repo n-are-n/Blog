@@ -22,9 +22,9 @@
                     <!-- Mail Field -->
                     <input type="email" name="Mail" placeholder="Mail ID" required><br>
                     <input type="password" size="20" name="Password" placeholder="Password" required><br>
-                    <!-- <label for="Pic">Avatar : </label><br> -->
+                    <label for="Pic">Avatar : </label><br>
                     <!-- Image Field : only images r allowed -->
-                    <!-- <input type="file" id="Pic" name="Pic" accept="image/*" title="only image are allowed" placeholder="Picture"><br> -->
+                    <input type="file" id="Pic" name="Pic" accept="image/jpeg" title="only image are allowed" placeholder="Picture"><br>
                     <input type="submit" class="button" value="Sign Up"><br>
                     <span>Have an account ? <a href="signin.php">Login</a></span>
                 </fieldset>

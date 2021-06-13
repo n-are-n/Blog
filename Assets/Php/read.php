@@ -5,23 +5,23 @@ $query = "SELECT P.ID,Name,P.Date_Time,Category,_Views,Title,Post FROM " . Posts
 $sql = mysqli_query($conn, $query);
 
 function Comment_Count($ID){ // Calling Function
-    $_query = "SELECT COUNT(_Comment) FROM " . Comments ." WHERE Post_ID = $ID";
-    $_sql = mysqli_query($GLOBALS['conn'],$_query);
-    $result = mysqli_fetch_array($_sql);
+    $query = "SELECT COUNT(_Comment) FROM " . Comments ." WHERE Post_ID = $ID";
+    $sql = mysqli_query($GLOBALS['conn'],$query);
+    $result = mysqli_fetch_array($sql);
     print_r($result['COUNT(_Comment)']); // Print the value
 }
 
 function Like($ID){
-    $_Query = "SELECT COUNT(Dislike) FROM " . Like_Dislike . " WHERE Dislike = 0 AND Post_ID = $ID";
-    $_Sql = mysqli_query($GLOBALS['conn'],$_Query);
-    $result = mysqli_fetch_array($_Sql);
+    $query = "SELECT COUNT(Dislike) FROM " . Like_Dislike . " WHERE Dislike = 0 AND Post_ID = $ID";
+    $sql = mysqli_query($GLOBALS['conn'],$query);
+    $result = mysqli_fetch_array($sql);
     print_r($result['COUNT(Dislike)']);
 }
 
 function Dislike($ID){
-    $_Query = "SELECT COUNT(Dislike) FROM " . Like_Dislike . " WHERE Dislike = 1 AND Post_ID = $ID";
-    $_Sql = mysqli_query($GLOBALS['conn'],$_Query);
-    $result = mysqli_fetch_array($_Sql);
+    $query = "SELECT COUNT(Dislike) FROM " . Like_Dislike . " WHERE Dislike = 1 AND Post_ID = $ID";
+    $sql = mysqli_query($GLOBALS['conn'],$query);
+    $result = mysqli_fetch_array($sql);
     print_r($result['COUNT(Dislike)']);
 }
 

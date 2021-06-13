@@ -1,29 +1,25 @@
-function comment (value)
-{
-    var count = value; // Num of rows in Post
-    var comments = document.getElementsByClassName('comments' ); // Get all class with comments
-    var forms = document.getElementsByTagName( 'form' ); // Get all form tag
-    var div = document.getElementsByClassName('comment');
-    var submit = document.getElementsByClassName( 'submit' );
-    comments[ count ].addEventListener( 'click', ( ev ) => // on click comments will toggle forms class
-    {
-        forms[ count ].classList.toggle( 'hidden' );
-        div[count].classList.toggle('hidden');
-    } );
-    submit[ count ].addEventListener( 'click', ( ev ) =>
-    {
-        forms[count].classList.add( 'hidden' );
-    } );
-}
 function coment(){
-    var comment  = document.getElementById('comments');
-    var form = document.getElementsByTagName('form');
+    var comment  = document.getElementById('comments'); // Get id with comments
+    var form = document.getElementsByTagName('form'); // Get form tag
     var submit = document.getElementById('submit');
-    comment.addEventListener('click', (ev) => {
+    comment.addEventListener('click', (ev) => { // on click comments will toggle forms class 
         form.classList.toggle('hidden');
     } );
     submit.addEventListener( 'click', ( ev ) =>
     {
         forms.classList.add( 'hidden' );
     } );
+}
+
+function showHint(value){
+    if(value.length > 0 ){ // Length of value should be greater than 0
+        const xhttp = new XMLHttpRequest(); // Creating a XMLHttpRequest
+        xhttp.onload = function() {
+            console.log(value);
+            document.getElementById("Hint").innerHTML = this.responseText; // Display the response in Hint
+            console.log(this.responseText);
+        }
+        xhttp.open("GET", "Assets/Php/search.php?search="+value); // Send the request to search.php
+        xhttp.send();
+    }
 }

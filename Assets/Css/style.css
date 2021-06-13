@@ -1,57 +1,52 @@
-body header {
+header {
   border-bottom: 1px solid #bbb;
 }
-body form,
-body fieldset,
-body .desc {
-  text-align: center;
-}
-body input[type="file"] {
+input[type="file"] {
   position: relative;
   top: 0;
   left: 35px;
 }
-body fieldset,
-body .desc {
-  display: inline;
+input[type="search"] {
+  border-radius: 20px;
 }
-body footer {
+footer {
   position: fixed;
   bottom: 0;
   left: 890px;
 }
-body .right {
-  float: right;
+form,
+fieldset{
+  text-align: center;
 }
-body .link:hover {
-  background: #f0f0f0;
+svg {
+  position: relative;
+  top: 5px;
+  margin-right: 1px;
 }
-body .dropdown {
-  display: inline;
-  float: right;
+svg:hover {
+  cursor: pointer;
 }
-body .dropdown:hover .menu {
-  display: inline;
-  margin-top: 40px;
+.search {
+  position: relative;
+  left: 500px;
 }
-body .menu {
-  display: none;
+.menu {
   background: #fffafa;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
   box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
-body .row {
+.row {
   border: 1px solid #bbb;
   margin: 5px 0;
   padding: 0 5px;
 }
-body .link {
+.link {
   display: block;
   padding: 10px;
   text-decoration: none;
   border-top: solid 1px #e0e0e0;
 }
-body .logo {
+.logo {
   font-family: monospace;
   font-size: 3rem;
   color: #33c3f0;
@@ -68,36 +63,32 @@ body .logo {
   transform-origin: center center;
   text-shadow: 1px 1px #1eaedb, 2px 2px #1eaedb, 3px 3px #1eaedb, 4px 4px #1eaedb, 5px 5px #1eaedb, 6px 6px #1eaedb, 7px 7px #1eaedb, 8px 8px #bbb, 9px 9px #bbb, 10px 10px #bbb, 11px 11px 15px rgba(0,0,0,0.5);
 }
-body .hidden {
-  display: none;
+.link:hover {
+  background: #f0f0f0;
 }
-body .login,
-body .delete {
+.dropdown:hover .menu {
+  margin-top: 40px;
+}
+a:hover .login {
+  fill: #333;
+}
+fieldset,
+.search,
+.dropdown,
+.dropdown:hover .menu {
+  display: inline;
+}
+.login,
+.delete {
   position: relative;
   top: 5px;
   right: 0;
 }
-body a:hover .login {
-  fill: #333;
+.menu,
+.hidden {
+  display: none;
 }
-svg {
-  position: relative;
-  top: 5px;
-  margin-right: 1px;
-}
-svg:hover {
-  cursor: pointer;
-}
-aside {
-  position: relative;
-  top: -400px;
-  left: 20px;
-}
-.search {
-  display: inline;
-  position: relative;
-  left: 500px;
-}
-.search input[type="search"] {
-  border-radius: 20px;
+.dropdown,
+.right {
+  float: right;
 }

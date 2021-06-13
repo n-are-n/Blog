@@ -52,7 +52,7 @@
                             </a>
                         </div>
                         <!-- Comment Form -->
-                        <form action="<?php echo BASE_URL ?>comment.php" method="GET" class="hidden">
+                        <form action="<?php echo BASE_URL ?>comment.php" method="GET" class="hidden" enctype="multipart/form-data">
                             <fieldset>
                                 <legend>Comment</legend>
                                 <input type="text" name="Post_ID" value="<?php echo $Blog['ID'] ?>" hidden>

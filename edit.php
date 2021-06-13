@@ -8,7 +8,7 @@
     <main>
         <section>
             <?php foreach ($_sql as $Blog) { #By foreach getting blog details from server ?>
-                <form action="<?php echo BASE_URL ?>edit.php" method="GET">
+                <form action="<?php echo BASE_URL ?>edit.php" method="GET" enctype="multipart/form-data">
                     <fieldset>
                         <legend>Edit Post</legend>
                         <!-- ID Field -->
