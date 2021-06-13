@@ -5,7 +5,7 @@ function comment (value)
     var forms = document.getElementsByTagName( 'form' ); // Get all form tag
     var div = document.getElementsByClassName('comment');
     var submit = document.getElementsByClassName( 'submit' );
-    comments[ count ].addEventListener( 'click', ( ev ) => // on click comments change forms class
+    comments[ count ].addEventListener( 'click', ( ev ) => // on click comments will toggle forms class
     {
         forms[ count ].classList.toggle( 'hidden' );
         div[count].classList.toggle('hidden');

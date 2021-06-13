@@ -1,3 +1,4 @@
+<!-- Side Bar -->
 <aside>
     <h5>Categories</h5>
     <ul>

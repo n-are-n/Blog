@@ -1,7 +1,9 @@
 <!-- Header -->
 <header>
+    <!-- Navbar -->
     <nav>
         <a href="index.php" class="logo">Blog</a>
+        <!-- Search Bar -->
         <div class="search">
             <input type="search" name="Search" size="90x90">
             <a href="">
@@ -10,6 +12,7 @@
         </div>
         <?php if (isset($_SESSION['Name'])) : #It check whether session is set 
         ?>
+            <!-- User Account Control -->
             <div class="dropdown">
                 <img style="border-radius: 50%;" src="" width="40" height="40" class="right">
                 <div class="menu">
@@ -21,6 +24,7 @@
             </div>
         <?php else : # else login is shown 
         ?>
+            <!-- Login -->
             <a href="signin.php" class="button right">
                 Login
                 <svg class="login" height="20" viewBox="0 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg" fill="#555">

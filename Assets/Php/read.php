@@ -4,11 +4,11 @@ include_once('config.php');
 $query = "SELECT P.ID,Name,P.Date_Time,Category,_Views,Title,Post FROM " . Posts . " P INNER JOIN " . Categories . " C ON P.Category_ID = C.ID INNER JOIN " . Users . " U ON P.User_ID = U.ID"; // Select all the records in table
 $sql = mysqli_query($conn, $query);
 
-function Comment_Count($ID){
+function Comment_Count($ID){ // Calling Function
     $_query = "SELECT COUNT(_Comment) FROM " . Comments ." WHERE Post_ID = $ID";
     $_sql = mysqli_query($GLOBALS['conn'],$_query);
     $result = mysqli_fetch_array($_sql);
-    print_r($result['COUNT(_Comment)']);
+    print_r($result['COUNT(_Comment)']); // Print the value
 }
 
 function Like($ID){
