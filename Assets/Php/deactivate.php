@@ -7,4 +7,4 @@ mysqli_query($conn,$query);
 session_start();
 session_unset(); // Unset the session variables
 session_destroy(); // Destroy session variables
-header('Location: ../../home.php?User=Deactivated');
+header('Location: ../../index.php?User=Deactivated');

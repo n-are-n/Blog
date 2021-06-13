@@ -1,7 +1,7 @@
 <!-- Header -->
 <header>
     <nav>
-        <a href="home.php" class="logo">Blog</a>
+        <a href="index.php" class="logo">Blog</a>
         <div class="search">
             <input type="search" name="Search" size="90x90">
             <a href="">

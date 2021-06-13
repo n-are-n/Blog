@@ -10,7 +10,7 @@ if ($rows > 0) { // If the user already exist then set session variables
     $ID = $array['ID'];
     $_SESSION['ID'] = $ID;
     $_SESSION['Name'] = $array['Name'];
-    header('Location: ../../home.php?Login=Success');
+    header('Location: ../../index.php?Login=Success');
 } else {
     header('Location: ../../signin.php?Login=Failed');
 }

@@ -1,6 +1,6 @@
 <!-- Register Page -->
 <?php include_once('Assets/Php/config.php') ?>
-<?php if(isset($_SESSION['ID'])): header('Location: home.php') ?><?php endif; ?>
+<?php if(isset($_SESSION['ID'])): header('Location: index.php') ?><?php endif; ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include_once('Inc/head.php') ?>
@@ -8,7 +8,7 @@
 <body>
     <header>
         <nav>
-            <a href="home.php" class="logo">Blog</a>
+            <a href="index.php" class="logo">Blog</a>
         </nav>
     </header>
     <main>
