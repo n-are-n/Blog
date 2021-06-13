@@ -7,7 +7,7 @@
 <?php include_once('Inc/header.php') ?>
     <main>
         <section>
-            <?php foreach ($sql as $Blog) { #By foreach getting blog details from server ?>
+            <?php foreach ($_sql as $Blog) { #By foreach getting blog details from server ?>
                 <form action="<?php echo BASE_URL ?>edit.php" method="GET">
                     <fieldset>
                         <legend>Edit Post</legend>
@@ -17,7 +17,10 @@
                         <select name="Category" style="padding: 6px 60px">
                             <option selected>Category</option>
                             <option value="1">Android Application Development</option>
-                            <option value="2">Windows Application Development</option>
+                            <option value="2">Macintosh Application Development</option>
+                            <option value="3">Unix Application Development</option>
+                            <option value="4">Website Application Development</option>
+                            <option value="5">Windows Application Development</option>
                         </select><br>
                         <textarea name="Post" cols="27"  required><?php echo $Blog['Post'] #Blog content ?></textarea><br>
                         <input type="submit" value="Update Post">

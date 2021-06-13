@@ -2,6 +2,12 @@
 <header>
     <nav>
         <a href="home.php" class="logo">Blog</a>
+        <div class="search">
+            <input type="search" name="Search" size="90x90">
+            <a href="">
+            <svg id="Layer_1" enable-background="new 0 0 512.392 512.392" height="20" viewBox="0 0 512.392 512.392" width="25" xmlns="http://www.w3.org/2000/svg"><g><path d="m211.196 422c-116.346 0-211-94.654-211-211s94.654-211 211-211 211 94.654 211 211-94.654 211-211 211zm0-382c-94.29 0-171 76.71-171 171s76.71 171 171 171 171-76.71 171-171-76.71-171-171-171zm295.143 466.534c7.81-7.811 7.81-20.475 0-28.285l-89.5-89.5c-7.811-7.811-20.475-7.811-28.285 0s-7.81 20.475 0 28.285l89.5 89.5c3.905 3.905 9.024 5.857 14.143 5.857s10.236-1.952 14.142-5.857z"/></g></svg>
+            </a>
+        </div>
         <?php if (isset($_SESSION['Name'])) : #It check whether session is set 
         ?>
             <div class="dropdown">

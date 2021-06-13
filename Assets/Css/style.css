@@ -88,3 +88,17 @@ svg {
 svg:hover {
   cursor: pointer;
 }
+aside {
+  position: relative;
+  top: -400px;
+  left: 20px;
+}
+.search {
+  display: inline;
+  position: relative;
+  left: 500px;
+}
+.search input[type="search"] {
+  border-radius: 20px;
+border-color
+}

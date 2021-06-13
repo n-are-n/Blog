@@ -18,7 +18,10 @@
                     <select name="Category" style="padding: 6px 60px;">
                         <option selected disabled>Categories</option>
                         <option value="1">Android Application Development</option>
-                        <option value="2">Windows Application Development</option>
+                        <option value="2">Macintosh Application Development</option>
+                        <option value="3">Unix Application Development</option>
+                        <option value="4">Website Application Development</option>
+                        <option value="5">Windows Application Development</option>
                     </select><br>
                     <!-- Blog Field -->
                     <textarea placeholder="Blog..." cols="27" name="Blog" required></textarea><br>

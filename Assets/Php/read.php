@@ -1,33 +1,35 @@
 <?php
 # Return all post's from database
 include_once('config.php');
-$query = "SELECT * FROM " . Table . " P INNER JOIN " . TABLE . " C ON C.ID = P.Category_ID WHERE C.ID = P.Category_ID"; // Select all the records in table
+$query = "SELECT P.ID,Category,_Views,Title,Post FROM " . Posts . " P INNER JOIN " . Categories . " C ON P.Category_ID = C.ID" ; // Select all the records in table
 $sql = mysqli_query($conn, $query);
 
-$_query = "SELECT Post_ID,COUNT(Coment) FROM " . _Table." GROUP BY Post_ID";
-$_sql = mysqli_query($conn,$_query);
-$array = [];
-foreach($_sql as $_count){
-    $array[] .= $_count['COUNT(Coment)'];
+function Comment_Count($ID){
+    $_query = "SELECT COUNT(_Comment) FROM " . Comments ." WHERE Post_ID = $ID";
+    $_sql = mysqli_query($GLOBALS['conn'],$_query);
+    $result = mysqli_fetch_array($_sql);
+    print_r($result['COUNT(_Comment)']);
 }
 
-$_Query = "SELECT Post_ID,Dislike,COUNT(Dislike) FROM " . _table . " GROUP BY Post_ID,Dislike";
-$_Sql = mysqli_query($conn,$_Query);
-foreach($_Sql as $_Count){
-    print_r($_Count);
-    echo '<br>';
+function Like($ID){
+    $_Query = "SELECT COUNT(Dislike) FROM " . Like_Dislike . " WHERE Dislike = 0 AND Post_ID = $ID";
+    $_Sql = mysqli_query($GLOBALS['conn'],$_Query);
+    $result = mysqli_fetch_array($_Sql);
+    print_r($result['COUNT(Dislike)']);
 }
-echo '<br>';
 
-$_array = array();
-$Query = "SELECT Post_ID,Coment FROM " . _Table;
-$Sql = mysqli_query($conn,$Query);
-print_r($Sql);
-echo '<br>';
-$result = mysqli_fetch_array($Sql);
-print_r($result);
-echo '<br>';
-foreach($Sql as $Comment){
-    $_array[] .= $Comment['Coment'];
+function Dislike($ID){
+    $_Query = "SELECT COUNT(Dislike) FROM " . Like_Dislike . " WHERE Dislike = 1 AND Post_ID = $ID";
+    $_Sql = mysqli_query($GLOBALS['conn'],$_Query);
+    $result = mysqli_fetch_array($_Sql);
+    print_r($result['COUNT(Dislike)']);
 }
-print_r($_array);
+
+function Comment($ID){
+    $query = "SELECT _Comment FROM " . Comments . " WHERE Post_ID = $ID";
+    $sql = mysqli_query($GLOBALS['conn'],$query);
+    foreach($sql as $comment){
+        print_r($comment['_Comment']);
+        echo '<br>';
+    }
+}
