@@ -21,6 +21,7 @@
                         <!-- Post created time -->
                         <span class="right"><?php echo $Blog['Date_Time'] ?></span>
                         <span>Written By : <?php echo $Blog['Name'] ?></span>
+                        <a href="<?php echo BASE_URL ?>follow.php?user=<?php echo $_SESSION['ID'] ?>&id=<?php echo $Blog['User_ID'] ?>">follow</a>
                         <div>
                             <h4>Title : <?php echo $Blog['Title'] ?></h4>
                             <h6>Category : <?php echo $Blog['Category'] ?></h6>

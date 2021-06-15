@@ -1,16 +1,16 @@
-function coment(){
+function comment(){
     var comment  = document.getElementById('comments'); // Get id with comments
+    var div = document.getElementById('coment');
     var form = document.getElementsByTagName('form'); // Get form tag
     var submit = document.getElementById('submit');
     comment.addEventListener('click', (ev) => { // on click comments will toggle forms class 
-        form.classList.toggle('hidden');
+        form[1].classList.toggle('hidden');
+        div.classList.toggle('hidden');
     } );
-    submit.addEventListener( 'click', ( ev ) =>
-    {
-        forms.classList.add( 'hidden' );
+    submit.addEventListener('click', (ev) => {
+        form[1].classList.add('hidden');
     } );
 }
-
 function showHint(value){
     if(value.length > 0 ){ // Length of value should be greater than 0
         const xhttp = new XMLHttpRequest(); // Creating a XMLHttpRequest

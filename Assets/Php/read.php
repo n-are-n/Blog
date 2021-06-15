@@ -1,7 +1,7 @@
 <?php
 # Return all post's from database
 include_once('config.php');
-$query = "SELECT P.ID,Name,P.Date_Time,Category,_Views,Title,Post FROM " . Posts . " P INNER JOIN " . Categories . " C ON P.Category_ID = C.ID INNER JOIN " . Users . " U ON P.User_ID = U.ID"; // Select all the records in table
+$query = "SELECT P.ID,P.User_ID,Name,P.Date_Time,Category,_Views,Title,Post FROM " . Posts . " P INNER JOIN " . Categories . " C ON P.Category_ID = C.ID INNER JOIN " . Users . " U ON P.User_ID = U.ID"; // Select all the records in table
 $sql = mysqli_query($conn, $query);
 
 function Comment_Count($ID){ // Calling Function

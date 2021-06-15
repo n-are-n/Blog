@@ -41,7 +41,7 @@
                                 </svg>(<?php Dislike($Blog['ID']) ?>) <!-- Dislike Function call -->
                             </a>
                             <!-- Comment SVG -->
-                            <a id="comments" onclick="coment()"> <!-- onclick coment Function is called -->
+                            <a id="comments" onclick="comment()"> <!-- onclick coment Function is called -->
                                 <svg id="Capa_1" enable-background="new 0 0 511.072 511.072" height="20" viewBox="0 0 511.072 511.072" width="20" xmlns="http://www.w3.org/2000/svg">
                                     <g id="Speech_Bubble_48_">
                                         <g>
@@ -50,7 +50,9 @@
                                     </g>
                                 </svg>(<?php Comment_Count($Blog['ID']) ?>) <!-- Function call to read.php -->
                             </a>
+                            <a href="<?php echo BASE_URL ?>favorite.php?user=<?php echo $_SESSION['ID'] ?>&post=<?php echo $Blog['ID'] ?>">+</a>
                         </div>
+                        <div id="coment" class="hidden"><?php Comment($Blog['ID']) ?></div>
                         <!-- Comment Form -->
                         <form action="<?php echo BASE_URL ?>comment.php" method="GET" class="hidden" enctype="multipart/form-data">
                             <fieldset>
