@@ -24,7 +24,7 @@
                         <option value="5">Windows Application Development</option>
                     </select><br>
                     <!-- Blog Field -->
-                    <textarea placeholder="Blog..." cols="27" name="Blog" required></textarea><br>
+                    <textarea placeholder="Blog..." cols="27" name="Blog" spellcheck="true" required></textarea><br>
                     <input type="submit" class="button" value="Add Post">
                 </fieldset>
             </form>
