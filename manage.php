@@ -7,11 +7,7 @@
 </html>
 
 <body>
-    <header>
-        <nav>
-            <a href="index.php" class="logo">Blog</a>
-        </nav>
-    </header>
+    <?php include_once('Inc/header.php') ?>
     <main>
         <section>
             <h1 style="display: inline;">Manage Posts</h1>

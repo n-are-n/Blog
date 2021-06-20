@@ -3,4 +3,4 @@
 session_start();
 session_unset();
 session_destroy();
-header('Location: ../../home.php?Logout=Success');
+header('Location: ../../index.php?Logout=Success');

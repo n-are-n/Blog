@@ -23,3 +23,8 @@ function showHint(value){
         xhttp.send();
     }
 }
+
+function reload() {
+    console.log(parent.location);
+    parent.location.href.reload();
+}
