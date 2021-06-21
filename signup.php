@@ -5,42 +5,25 @@
 <html lang="en">
 <?php include_once('Inc/head.php') ?>
 
-<head>
-    <link rel="stylesheet" href="Assets/Css/signin.css">
-</head>
-
-<body class="text-center">
-    <main class="form-signin">
-        <form action="<?php echo BASE_URL ?>signup.php" method="post" enctype="multipart/form-data">
-            <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-            <h1 class="h3 mb-3 fw-normal">Sign Up</h1>
-            <!-- Name Field : only space & alphabets r allowed -->
-            <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInput" name="Name" placeholder="Full Name" title="only alphabet & space allowed" pattern="[A-Za-z\s]+" required>
-                <label for="floatingInput">Full Name</label>
-            </div>
-            <div class="form-floating">
-                <input type="tel" class="form-control" id="floatingInput" name="Number" placeholder="Phone Number" pattern="[0-9]{10}" title="only numbers allowed" required>
-                <label for="floatingInput">Phone Number</label>
-            </div>
-            <!-- Mail Field -->
-            <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" name="Mail" placeholder="Mail ID" required>
-                <label for="floatingInput">Mail ID</label>
-            </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" size="20" name="Password" placeholder="Password" required>
-                <label for="floatingPassword">Password</label>
-            </div>
-            <!-- Image Field : only images r allowed -->
-            <!-- <div>
-                <input type="file" class="form-control" id="floatingInput" name="Pic" accept="image/jpeg" title="only image are allowed" placeholder="Picture"><br>
-                <label for="floatingInput">Avatar : </label>
-            </div> -->
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
-        </form>
+<body>
+    <main id="signin-main">
+        <section id="signin-form">
+            <form action="<?php echo BASE_URL ?>signup.php" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Sign Up</legend>
+                    <!-- Name Field : only space & alphabets r allowed -->
+                    <input type="text" name="Name" size="32" placeholder="Full Name" title="only alphabet & space allowed" pattern="[A-Za-z\s]+" required><br>
+                    <input type="tel" name="Number" size="32" placeholder="Phone Number" pattern="[0-9]{10}" title="only numbers allowed" required><br>
+                    <!-- Mail Field -->
+                    <input type="email" name="Mail" size="32" placeholder="Mail ID" required><br>
+                    <input type="password" size="32" name="Password" placeholder="Password" required><br>
+                    <!-- Image Field : only images r allowed -->
+                    <!-- <input type="file" name="Pic" size="32" accept="image/jpeg" title="only image are allowed" placeholder="Picture"><br> -->
+                    <input type="submit" value="Sign Up">
+                </fieldset>
+            </form>
+        </section>
     </main>
-    <?php include_once('Inc/foot.php') ?>
 </body>
 
 </html>
