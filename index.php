@@ -6,6 +6,7 @@
 
 <body>
     <?php include_once('Inc/header.php') ?>
+    <?php include_once('Inc/aside.php') ?>
     <main>
         <section>
             <?php
@@ -25,3 +26,4 @@
 </body>
 
 </html>
+                
