@@ -1,5 +1,5 @@
+<?php include_once('Assets/Php/config.php') ?>
 <!-- Home Page -->
-<?php include_once('Assets/Php/read.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include_once('Inc/head.php') ?>
@@ -9,21 +9,10 @@
     <?php include_once('Inc/aside.php') ?>
     <main>
         <section>
-            <?php
-            if ($sql != false) { // If true is returned this part will be executed
-                foreach ($sql as $Blog) { ?>
-                    <div>
-                        
-                    </div>
-                <?php }
-            } else { ?>
-                <!-- If False is returned from server else part will be executed -->
-                <h1 style="text-align: center;">No Post Found!</h1>
-            <?php } ?>
+            <iframe src="home.php" name="page" frameborder="0" width="1127" height="806"></iframe>
         </section>
     </main>
-    <?php include_once('Inc/foot.php') ?>
+    <script src="Assets/Js/Category.js"></script>
 </body>
 
 </html>
-                

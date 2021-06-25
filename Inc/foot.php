@@ -1,4 +1,7 @@
 <!-- Footer -->
 <footer>
-    <a href="#">Blog</a>
+    <div>
+        <a href="">Blog</a>
+    </div>
 </footer>
+<script src="Assets/Js/script.js"></script>

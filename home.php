@@ -1,4 +1,5 @@
-<?php include_once('Assets/Php/category.php') ?>
+<?php include_once('Assets/Php/read.php') ?>
+
 <head>
     <link rel="stylesheet" href="Assets/Stylus/fav.css">
 </head>
@@ -13,10 +14,10 @@
         <p>Like (<?php Like($Blog['ID']) ?>)</p>
         <p>Dislike (<?php Dislike($Blog['ID']) ?>)</p>
         <p>Comments (<?php Comment_Count($Blog['ID']) ?>)</p>
-        <?php if (isset($_SESSION['ID'])) : ?>
+        <?php if(isset($_SESSION['ID'])) : ?>
             <a href="<?php echo BASE_URL ?>favorite.php?user=<?php echo $_SESSION['ID'] ?>&post=<?php echo $Blog['ID'] ?>">+</a>
         <?php endif ?>
-        <a href="<?php echo BASE_URL ?>count.php?id=<?php echo $Blog['ID'] ?>&view=<?php echo $Blog['_Views'] ?>">Read More >>></a>
+        <a href="<?php echo BASE_URL ?>count.php?id=<?php echo $Blog['ID'] ?>&view=<?php echo $Blog['_Views'] ?>" target="page">Read More >>></a>
     </div>
     <hr>
 <?php } ?>
