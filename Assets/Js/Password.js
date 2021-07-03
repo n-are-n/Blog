@@ -1,6 +1,3 @@
-function reload() {
-    parent.location.reload();
-}
 var show = document.querySelector('#Show');
 var Password = document.querySelector('#Password');
 show.addEventListener('click', (e) => {

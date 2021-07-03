@@ -1,9 +1,0 @@
-body {
-  font-family: monospace;
-}
-body::-webkit-scrollbar {
-  display: none;
-}
-body .hidden {
-  display: none;
-}

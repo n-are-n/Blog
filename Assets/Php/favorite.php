@@ -4,4 +4,4 @@ $User = $_REQUEST['user'];
 $Post = $_REQUEST['post'];
 $query = "INSERT INTO ". Favortite_Posts ."(User_ID,Post_ID) VALUES($User,$Post)";
 mysqli_query($GLOBALS['conn'],$query);
-header('Location: ../../view.php?id='.$Post);
+header('Location: ../../home.php?Favorite=Added');

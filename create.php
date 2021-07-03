@@ -1,8 +1,16 @@
 <!-- Create Post Page -->
 <?php include_once('Assets/Php/config.php') ?>
-<head>
-    <link rel="stylesheet" href="Assets/Stylus/sign.css">
-</head>
+<?php include_once('Assets/Php/categories.php') ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<?php include_once('Inc/head.php') ?>
+
+<body>
+    <?php include_once('Inc/header.php') ?>
+    <?php include_once('Inc/aside.php') ?>
+    <main>
+        <section>
             <form action="<?php echo BASE_URL . 'create.php' ?>" method="GET" enctype="multipart/form-data">
                 <fieldset>
                     <legend>New Post</legend>
@@ -12,14 +20,19 @@
                     <!-- Category Field -->
                     <select name="Category">
                         <option selected disabled>Category</option>
-                        <option value="1">Android Application Development</option>
-                        <option value="2">Macintosh Application Development</option>
-                        <option value="3">Unix Application Development</option>
-                        <option value="4">Website Application Development</option>
-                        <option value="5">Windows Application Development</option>
+                        <?php foreach ($sql as $Categories) { ?>
+                            <option value="<?php echo $Categories['ID'] ?>"><?php echo $Categories['Category'] ?></option>
+                        <?php } ?>
                     </select><br>
                     <!-- Blog Field -->
                     <textarea name="Blog" placeholder="Post Desc..." spellcheck="true" required></textarea><br>
                     <input type="submit" value="Add Post">
                 </fieldset>
             </form>
+        </section>
+    </main>
+    <?php include_once('Inc/foot.php') ?>
+    <!-- <script src="Assets/Js/Category.js"></script> -->
+</body>
+
+</html>

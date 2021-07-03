@@ -1,25 +1,32 @@
-@import 'nib'
-body
+@import url('position.css')
+*
     font-family monospace
+    color white
+body
     form
         fieldset
             display inline-block
             text-align center
-            absolute top 300px left 420px
             font-size x-large
             input
                 margin-bottom .5rem
                 font-size large
                 outline none
+                color black
             input[type='submit']
+                color white
                 margin-bottom 0
+                background-color blue
+                border none
+                border-radius .5rem
+                padding .5rem 1rem
             p
                 margin-bottom 0
             a
                 text-decoration none
-                color black
+                color white
             span
                 color rgba(0,0,225,0.5)
-                margin-left -3.5rem
+                margin-left -4.4rem
                 cursor pointer
                 z-index 10

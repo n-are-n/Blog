@@ -1,4 +1,4 @@
-var comment  = document.getElementById('comments'); // Get id with comments
+var comment = document.getElementById('comments'); // Get id with comments
 var div = document.getElementById('comment');
 var form = document.getElementById('form'); // Get form tag
 var submit = document.getElementById('submit');

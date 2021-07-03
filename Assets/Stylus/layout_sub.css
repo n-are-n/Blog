@@ -1,0 +1,30 @@
+body header {
+  width: 100vw;
+  height: 6vh;
+}
+body header:last-of-type {
+  position: fixed;
+  left: 0;
+}
+body aside {
+  width: 20vw;
+  height: 87vh;
+}
+body aside:first-of-type {
+  position: fixed;
+  top: 120px;
+}
+body aside:last-of-type {
+  position: fixed;
+  top: 120px;
+  right: 0;
+}
+body form fieldset {
+  position: absolute;
+  top: 450px;
+  left: 800px;
+}
+body footer {
+  width: 100vw;
+  height: 5vh;
+}
