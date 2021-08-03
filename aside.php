@@ -1,4 +1,5 @@
-<?php include_once('Assets/Php/category.php') ?>
+<!-- Home Page -->
+<?php include_once('Assets/Php/aside.php') ?>
 <?php include_once('Assets/Php/Comment_Count.php') ?>
 <?php include_once('Assets/Php/Like_Count.php') ?>
 <?php include_once('Assets/Php/Dislike_Count.php') ?>
@@ -6,7 +7,7 @@
 <html lang="en">
 <?php include_once('Inc/head.php') ?>
 
-<body>
+<body onload="readTime()">
     <?php include_once('Inc/header.php') ?>
     <?php include_once('Inc/aside.php') ?>
     <main>
@@ -21,7 +22,7 @@
                             <?php if (isset($Blog['Name'])) : ?>
                                 <a href="profile.php?id=<?php echo $Blog['User_ID'] ?>"><?php echo $Blog['Name'] ?></a>
                             <?php endif ?>
-                            <span class="views"><?php echo $Blog['_Views'] ?> Views</span>
+                            <span class="views"><?= $Blog['_Views'] ?> Views</span>
                         </div>
                         <div>
                             <a href="<?php echo BASE_URL ?>count.php?id=<?php echo $Blog['ID'] ?>&view=<?php echo $Blog['_Views'] ?>">
@@ -33,10 +34,10 @@
                                     </b>
                                 </h1>
                             </a>
-                            <a href="<?php echo BASE_URL ?>count.php?id=<?php echo $Blog['ID'] ?>&view=<?php echo $Blog['_Views'] ?>">
+                            <a href="<?= BASE_URL ?>count.php?id=<?= $Blog['ID'] ?>&view=<?= $Blog['_Views'] ?>">
                                 <b>
                                     <i>
-                                        <p class="Post"><?php echo $Blog['Post']; ?></p>
+                                        <p class="Post"><?= $Blog['Post']; ?></p>
                                     </i>
                                 </b>
                             </a>
@@ -50,20 +51,20 @@
                                 <span id="comment">&#128172;</span>
                                 <span> <?php Comment_Count($Blog['ID']) ?></span>
                                 <?php if (isset($_SESSION['ID'])) : ?>
-                                    <a href="<?php echo BASE_URL ?>favorite.php?user=<?php echo $_SESSION['ID'] ?>&post=<?php echo $Blog['ID'] ?>" title="Add to favorite">&#9825;</a>
+                                    <a href="<?= BASE_URL ?>favorite.php?user=<?= $_SESSION['ID'] ?>&post=<?= $Blog['ID'] ?>" title="Add to favorite">&#9825;</a>
                                 <?php endif ?>
                             </div>
                             <div>
-                                <a href="categories.php?id=<?php echo $Blog['Category_ID'] ?>"><?php echo $Blog['Category'] ?></a>
+                                <a href="categories.php?id=<?= $Blog['Category_ID'] ?>"><?= $Blog['Category'] ?></a>
                                 <span>&#126;</span>
                                 <span class="readTime"></span>
                                 <span>&#126;</span>
-                                <span><?php echo $Blog['created_at'] ?></span>
+                                <span><?= $Blog['created_at'] ?></span>
                             </div>
                         </div>
                     </div>
                     <div class="Photo">
-                        <a href="<?php echo BASE_URL ?>count.php?id=<?php echo $Blog['ID'] ?>&view=<?php echo $Blog['_Views'] ?>">
+                        <a href="<?= BASE_URL ?>count.php?id=<?= $Blog['ID'] ?>&view=<?= $Blog['_Views'] ?>">
                             <img src="Assets/Pic//Chotta.jpg" alt="" width="200" height="150">
                         </a>
                     </div>
@@ -72,6 +73,7 @@
         </section>
     </main>
     <?php include_once('Inc/foot.php') ?>
+    <script src="Assets/Js/readTime.js"></script>
 </body>
 
 </html>

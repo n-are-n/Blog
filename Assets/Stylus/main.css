@@ -1,0 +1,62 @@
+@import url("_nib.css");
+* {
+  color: #fff;
+}
+body main {
+  display: inline-block;
+  width: 59vw;
+  margin-left: 25rem;
+  margin-top: 4rem;
+}
+body main section form {
+  position: absolute;
+  left: 21rem;
+}
+body main section form select {
+  padding: 0.3rem;
+  font-size: medium;
+  color: #000;
+  outline: none;
+}
+body main section form select option {
+  color: #000;
+}
+body main section article {
+  margin: 1rem 1rem;
+}
+body main section article .views {
+  float: right;
+}
+body main section article .content {
+  width: 70%;
+  display: inline-block;
+}
+body main section article .content div:last-of-type div:first-child {
+  position: relative;
+  top: -0.5rem;
+  display: inline-block;
+  font-size: 1rem;
+}
+body main section article .content div:last-of-type div:first-child #comment {
+  position: relative;
+  top: 0.1rem;
+}
+body main section article .content div:last-of-type div:first-child a:last-child {
+  position: relative;
+  top: 0.3rem;
+  left: 0.5rem;
+  font-size: 1.3rem !important;
+}
+body main section article .content div:last-of-type div:last-of-type {
+  float: right;
+}
+body main section article .content div:last-of-type div:last-of-type a:first-child {
+  padding: 0.3rem 0.6rem;
+  background-color: #000;
+  border-radius: 100px;
+}
+body main section article .Photo {
+  padding-left: 1rem;
+  width: 20%;
+  display: inline;
+}

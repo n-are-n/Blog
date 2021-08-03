@@ -1,33 +1,34 @@
 function readTime() {
     const wordsPerMinute = 270;
     // Select all the paragraphs in element with ID readText.
-    console.log('WPM :' + wordsPerMinute);
+    // console.log('WPM :' + wordsPerMinute);
     var post = document.querySelectorAll('.Post');
+    // console.log(post);
     var time = document.querySelector('.readTime');
-    console.log(post);
+    // console.log(time);
     // The counter.
     var count = 0;
-    console.log('Count :' + count);
+    // console.log('Count :' + count);
     for (var i = 0; i < post.length; i++) {
         // Split the innerHtml of the current paragraph to count the words.
         count += post[i].innerHTML.split(' ').length;
-        console.log('Count :' + count);
+        // console.log('Count :' + count);
     }
     //split text by spaces to define total words
     var totalWords = count;
-    console.log('Total Words :' + totalWords)
+    // console.log('Total Words :' + totalWords)
     //define words per second based on words per minute (s.wordsPerMinute)
     var wordsPerSecond = wordsPerMinute / 60;
-    console.log('WPS :' + wordsPerSecond);
+    // console.log('WPS :' + wordsPerSecond);
     //define total reading time in seconds
     var totalReadingTimeSeconds = totalWords / wordsPerSecond;
-    console.log('TotalReadingTimeSeconds' + totalReadingTimeSeconds);
+    // console.log('TotalReadingTimeSeconds' + totalReadingTimeSeconds);
     // define reading time
     var readingTimeDuration = Math.floor(totalReadingTimeSeconds / 60);
-    console.log('ReadingTimeDuration :' + readingTimeDuration);
+    // console.log('ReadingTimeDuration :' + readingTimeDuration);
     // define remaining reading time seconds
     var readingTimeSeconds = Math.round(totalReadingTimeSeconds - (readingTimeDuration * 60));
-    console.log('ReadingTimeSeconds :' + readingTimeSeconds);
+    // console.log('ReadingTimeSeconds :' + readingTimeSeconds);
     if (readingTimeDuration > 0) {
         if (readingTimeSeconds > 30) {
             readingTimeDuration = readingTimeDuration + 1

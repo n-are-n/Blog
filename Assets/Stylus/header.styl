@@ -1,20 +1,20 @@
-@import url('layout_sub.css')
-@import url('media_queries.css')
+@import url('_nib.css')
 $margin = 1rem
 $size = .3rem
 $shadow = 1px
 $_shadow = 2px
 $Border_radius = 50%
 *
-    color white !important
+    color white
 h1
-    margin 0 !important
+    margin 0
 a
     text-decoration none
+    // color white
 body
-    background-color #0d1117
-    font-family monospace
     margin 0
+    font-family monospace
+    background-color #0d1117
     &::-webkit-scrollbar
         display none
     header:first-child
@@ -34,7 +34,6 @@ body
             a
                 button
                     background-color blue
-                    color white
                     border none
                     border-radius .5rem
                     padding .5rem 1rem
@@ -43,7 +42,6 @@ body
             input[type='search']
                 margin-right .2rem
                 padding $size $size
-                color white
                 border .1rem solid gray
                 border-radius 1rem
                 background-color #0d1117
@@ -58,7 +56,7 @@ body
             display inline-block
     header:last-of-type
         nav
-            margin 1rem 2.6rem
+            margin 1rem 0
             padding-bottom .9rem
             overflow auto
             white-space nowrap
@@ -67,8 +65,6 @@ body
                 &-thumb
                     background-color white
                     border-radius 1rem
-                &-track
-                    background-color #0d1117
             a
                 display inline-block
                 text-align center
@@ -91,21 +87,3 @@ body
     form
     header:last-of-type nav a
         font-size larger
-    aside:last-of-type
-        border-left .1rem solid white
-        border-right 0 !important
-    aside
-        border-right .1rem solid white
-    aside
-    main
-        display inline-block
-    main
-        width 59vw
-        margin-left 25rem
-        margin-top 4rem
-    footer
-        position sticky
-        bottom 0
-        left 0
-        text-align center
-        border-top 1px solid gray

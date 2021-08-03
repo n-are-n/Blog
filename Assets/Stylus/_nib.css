@@ -7,7 +7,7 @@ body header:last-of-type {
   left: 0;
 }
 body aside {
-  width: 20vw;
+  width: 15vw;
   height: 87vh;
 }
 body aside:first-of-type {
@@ -19,10 +19,13 @@ body aside:last-of-type {
   top: 120px;
   right: 0;
 }
-body form fieldset {
-  position: absolute;
-  top: 450px;
-  left: 800px;
+body main section article {
+  position: relative;
+  left: 3rem;
+}
+body main section article div:first-child div:first-child {
+  position: relative;
+  top: -1.3rem;
 }
 body footer {
   width: 100vw;

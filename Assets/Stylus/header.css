@@ -1,18 +1,17 @@
-@import url("layout_sub.css");
-@import url("media_queries.css");
+@import url("_nib.css");
 * {
-  color: #fff !important;
+  color: #fff;
 }
 h1 {
-  margin: 0 !important;
+  margin: 0;
 }
 a {
   text-decoration: none;
 }
 body {
-  background-color: #0d1117;
-  font-family: monospace;
   margin: 0;
+  font-family: monospace;
+  background-color: #0d1117;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -34,7 +33,6 @@ body header:first-child div:nth-of-type(2) img {
 }
 body header:first-child div:last-of-type a button {
   background-color: #00f;
-  color: #fff;
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -45,7 +43,6 @@ body header:first-child form {
 body header:first-child form input[type='search'] {
   margin-right: 0.2rem;
   padding: 0.3rem 0.3rem;
-  color: #fff;
   border: 0.1rem solid #808080;
   border-radius: 1rem;
   background-color: #0d1117;
@@ -62,7 +59,7 @@ body header:first-child form {
   display: inline-block;
 }
 body header:last-of-type nav {
-  margin: 1rem 2.6rem;
+  margin: 1rem 0;
   padding-bottom: 0.9rem;
   overflow: auto;
   white-space: nowrap;
@@ -104,27 +101,4 @@ body header:first-child nav,
 body form,
 body header:last-of-type nav a {
   font-size: larger;
-}
-body aside:last-of-type {
-  border-left: 0.1rem solid #fff;
-  border-right: 0 !important;
-}
-body aside {
-  border-right: 0.1rem solid #fff;
-}
-body aside,
-body main {
-  display: inline-block;
-}
-body main {
-  width: 59vw;
-  margin-left: 25rem;
-  margin-top: 4rem;
-}
-body footer {
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  border-top: 1px solid #808080;
 }
