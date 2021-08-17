@@ -1,5 +1,4 @@
 <!-- Header -->
-<?php include_once('Assets/Php/Categories.php') ?>
 <header>
     <div id="Logo">
         <a href="" title="Logo">
@@ -43,9 +42,5 @@
 </header>
 <header>
     <nav id="carousel">
-        <?php foreach($sql as $_Categories) { ?>
-            <a class="Category" onclick="Category(<?= $_Categories['ID'] ?>)" title="<?= $_Categories['Category'] ?>"><?= $_Categories['Category'] ?></a>
-        <?php } ?>
     </nav>
 </header>
-<script src="Assets/Js/header.js"></script>

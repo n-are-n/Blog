@@ -11,11 +11,13 @@ function Category(ID) {
 }
 function search(){
     var Search = document.getElementById('Search').value;
-    console.log(Search);
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
+            var result = JSON.parse(this.responseText);
+            result.forEach(e => {
+                console.log(e);
+            });
         }
     }
     xhr.open('GET', 'Assets/Php/search.php?Key=' + Search, true);

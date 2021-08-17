@@ -27,7 +27,6 @@
         </section>
     </main>
     <?php include_once('Inc/foot.php') ?>
-    <script src="Assets/Js/Password.js"></script>
 </body>
 
 </html>

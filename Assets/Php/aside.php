@@ -8,6 +8,6 @@ $query = "SELECT P.ID,User_ID,Name,DATE_FORMAT( P.Date_Time , '%b %d' ) as creat
             WHEN User_id = $Author AND Category_id = $Category THEN User_id = $Author AND Category_id = $Category
             END)";
 $_sql = mysqli_query($conn, $query);
-foreach($_sql as $aside){
-    print_r($aside);
+foreach($_sql as $post){
+    print_r($post);
 }

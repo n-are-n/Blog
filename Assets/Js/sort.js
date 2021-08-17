@@ -3,7 +3,13 @@ function Sort() {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
+            var result = JSON.parse(this.responseText);
+            result.forEach(e => {
+                var result = JSON.parse(this.responseText);
+                result.forEach(e => {
+                    console.log(e);
+                });
+            });
         }
     }
     xhr.open('GET', "Assets/Php/sort.php?sort=" + sort , true);

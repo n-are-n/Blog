@@ -73,7 +73,6 @@
         </section>
     </main>
     <?php include_once('Inc/foot.php') ?>
-    <script src="Assets/Js/readTime.js"></script>
 </body>
 
 </html>
