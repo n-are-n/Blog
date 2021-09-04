@@ -1,7 +1,7 @@
 var Inputs = document.querySelectorAll('input[type="radio"]');
 var Submit = document.getElementById('Submit');
 Inputs.forEach(Input => {
-    Input.addEventListener('click', (e) => {
+    Input.addEventListener('click', () => {
         if (Input.checked) {
             var URL = 'Assets/Php/aside.php?' + Input.name + '=' + Input.value;
             var xhr = new XMLHttpRequest();

@@ -4,7 +4,7 @@ function Sort() {
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var result = JSON.parse(this.responseText);
-            result.forEach(e => {
+            result.forEach(() => {
                 var result = JSON.parse(this.responseText);
                 result.forEach(e => {
                     console.log(e);

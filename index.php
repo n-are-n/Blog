@@ -4,9 +4,7 @@
 <?php include_once('Assets/Php/Dislike_Count.php') ?>
 <!DOCTYPE html>
 <html lang="en">
-
     <?php include_once('Inc/head.php') ?>
-
 <body onload="Post(),Category(),Author(),asideCategory()">
     <?php include_once('Inc/header.php') ?>
     <?php include_once('Inc/aside.php') ?>
@@ -19,8 +17,6 @@
                     <option value="View">Views</option>
                 </select>
             </form>
-
-            <script src="Assets/Js/sort.js"></script>
         </section>
     </main>
     <?php include_once('Inc/foot.php') ?>
