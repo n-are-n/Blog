@@ -1,0 +1,50 @@
+* {
+  color: #fff;
+}
+body aside {
+  display: inline-block;
+  font-size: x-large;
+}
+body aside form div {
+  overflow: auto;
+  white-space: nowrap;
+  height: 34vh;
+}
+body aside form div::-webkit-scrollbar {
+  width: 0.3rem;
+}
+body aside form div::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 1rem;
+}
+body aside form label {
+  font-size: large;
+}
+body aside form legend {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+body aside form input[type="submit"] {
+  position: relative;
+  top: 2rem;
+  left: 3rem;
+  background-color: #00f;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+body aside:first-of-type {
+  border-right: 0.1rem solid #fff;
+}
+body aside:first-of-type form {
+  width: 10vw;
+  position: relative;
+  left: -3rem;
+}
+body aside:last-of-type {
+  border-left: 0.1rem solid #fff;
+}
+body aside:last-of-type form {
+  position: relative;
+  left: -4rem;
+}
