@@ -1,0 +1,50 @@
+body main section,
+body main form {
+  position: relative;
+  top: 5rem;
+  left: -5rem;
+}
+body main section fieldset,
+body main form fieldset {
+  display: inline-block;
+  text-align: center;
+  font-size: x-large;
+}
+body main section fieldset input,
+body main form fieldset input {
+  margin-bottom: 0.5rem;
+  font-size: large;
+  color: #000;
+}
+body main section fieldset input[type='submit'],
+body main form fieldset input[type='submit'] {
+  color: #fff;
+  margin-bottom: 0;
+  background-color: #00f;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+body main section fieldset select,
+body main form fieldset select {
+  width: 40vw;
+  height: 4vh;
+  color: #000;
+}
+body main section fieldset select option,
+body main form fieldset select option {
+  color: #000;
+}
+body main section fieldset textarea,
+body main form fieldset textarea {
+  margin-top: 0.5rem;
+  color: #000;
+}
+body main section fieldset input,
+body main form fieldset input,
+body main section fieldset select,
+body main form fieldset select,
+body main section fieldset textarea,
+body main form fieldset textarea {
+  outline: none;
+}

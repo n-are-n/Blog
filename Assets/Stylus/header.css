@@ -1,0 +1,104 @@
+@import url("_nib.css");
+* {
+  color: #fff;
+}
+h1 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  font-family: monospace;
+  background-color: #0d1117;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body header:first-child {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+body header:first-child #Logo a {
+  margin-left: 1rem;
+}
+body header:first-child a:last-child {
+  margin-right: 1rem;
+}
+body header:first-child div:nth-of-type(2) img {
+  margin: 0 1rem;
+  border-radius: 50%;
+}
+body header:first-child div:last-of-type a button {
+  background-color: #00f;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+body header:first-child form {
+  margin-right: 0.3rem;
+}
+body header:first-child form input[type='search'] {
+  margin-right: 0.2rem;
+  padding: 0.3rem 0.3rem;
+  border: 0.1rem solid #808080;
+  border-radius: 1rem;
+  background-color: #0d1117;
+  outline: none;
+}
+body header:first-child input[type='search'],
+body header:first-child button {
+  font-size: large;
+}
+body header:first-child div,
+body header:first-child nav,
+body header:first-child form {
+  padding-top: 0.8rem;
+  display: inline-block;
+}
+body header:last-of-type nav {
+  margin: 1rem 0;
+  padding-bottom: 0.9rem;
+  overflow: auto;
+  white-space: nowrap;
+}
+body header:last-of-type nav::-webkit-scrollbar {
+  height: 0.2rem;
+}
+body header:last-of-type nav::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 1rem;
+}
+body header:last-of-type nav::-webkit-scrollbar-track {
+  background-color: #0d1117;
+}
+body header:last-of-type nav a {
+  display: inline-block;
+  text-align: center;
+}
+body header {
+  border-bottom: 1px solid #808080;
+  background-color: #161b22;
+  font-size: large;
+}
+body header:first-child a,
+body header:last-of-type nav a {
+  text-decoration: none;
+}
+body header:first-child div:nth-of-type(2),
+body header:first-child div:last-of-type,
+body form {
+  float: right;
+}
+body header:first-child nav a,
+body header:last-of-type nav a {
+  padding: 0 1.1rem;
+}
+body header:first-child div,
+body header:first-child nav,
+body form,
+body header:last-of-type nav a {
+  font-size: larger;
+}
