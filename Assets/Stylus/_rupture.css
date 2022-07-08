@@ -1,8 +1,0 @@
-@media only screen and (min-width: 800px) and (max-width: 1440px) {
-  * {
-    font-size: small;
-  }
-  header:first-child {
-    height: 7vh !important;
-  }
-}
